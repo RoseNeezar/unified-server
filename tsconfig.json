@@ -22,6 +22,6 @@
     "resolveJsonModule": true,
     "skipLibCheck": true
   },
-  "exclude": ["node_modules","./generated"],
-  "include": ["./src/**/*.tsx", "./**/*.ts"]
+  "exclude": ["node_modules", "./generated"],
+  "include": ["./src/**/*.tsx", "./src/**/*.ts"]
 }

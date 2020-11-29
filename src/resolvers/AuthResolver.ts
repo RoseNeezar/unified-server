@@ -13,7 +13,7 @@ export class AuthResolver {
   ): Promise<UserResponse> {
     const existingUser = await UserModel.findOne({ email });
 
-    if (!existingUser) {
+    if (existingUser) {
       throw new Error("Email already in use");
     }
 
