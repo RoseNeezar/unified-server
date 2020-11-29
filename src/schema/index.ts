@@ -11,7 +11,7 @@ import { ObjectIdScalar } from "./object-id.scalar";
 export default async function createSchema(): Promise<GraphQLSchema> {
   const schema = await buildSchema({
     resolvers: [UserResolver, AuthResolver, StreamResolver],
-    emitSchemaFile: path.resolve(__dirname, "schema.graphql"),
+    emitSchemaFile: path.resolve(__dirname, "schema.gql"),
     globalMiddlewares: [TypegooseMiddleware],
     scalarsMap: [{ type: ObjectId, scalar: ObjectIdScalar }],
     validate: false,
