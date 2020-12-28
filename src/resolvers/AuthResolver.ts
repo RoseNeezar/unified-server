@@ -43,10 +43,10 @@ export class AuthResolver {
       throw new Error("Invalid login");
     }
 
-    const valid = bcrypt.compare(password, existingUser.password);
+    const valid = await bcrypt.compare(password, existingUser.password);
 
     if (!valid) {
-      throw new Error("Invalid login");
+      throw new Error("Wrong password");
     }
 
     const payload = {
