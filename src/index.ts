@@ -15,7 +15,7 @@ async function createServer() {
 
     app.use(
       cors({
-        origin: "http://localhost:3000",
+        origin: "https://unified-client.vercel.app",
         credentials: true,
       })
     );
@@ -31,7 +31,7 @@ async function createServer() {
 
     apolloServer.applyMiddleware({
       app,
-      cors: { origin: "http://localhost:3000", credentials: true },
+      cors: { origin: "https://unified-client.vercel.app", credentials: true },
     });
 
     app.listen({ port }, () => {
